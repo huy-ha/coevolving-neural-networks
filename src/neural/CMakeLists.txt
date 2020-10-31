@@ -1,0 +1,6 @@
+add_library(NeuralLib NeuralNetwork.cpp )
+target_include_directories(NeuralLib PRIVATE ${PROJECT_SOURCE_DIR}/include ) 
+target_include_directories(NeuralLib PUBLIC .)
+add_executable( NeuralDemo  main.cpp)
+set_property(TARGET NeuralDemo PROPERTY CXX_STANDARD 17)
+target_link_libraries (NeuralDemo NeuralLib VoxelizeLib stdc++fs)

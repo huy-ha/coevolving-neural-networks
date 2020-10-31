@@ -1,0 +1,5 @@
+file(GLOB TEST_SRC_FILES ${PROJECT_SOURCE_DIR}/test/*.cpp)
+add_executable(VoxelizeTest ${TEST_SRC_FILES})
+target_link_libraries(VoxelizeTest gtest gtest_main VoxelizeLib)
+add_test(NAME RunUnitTest COMMAND VoxelizeTest)
+set(CMAKE_BUILD_TYPE Release)
