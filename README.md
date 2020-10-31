@@ -44,4 +44,19 @@ If you already have a creature JSON file, and you just want to run its simulatio
 build/creature/CreatureVisualizer <path-to-json>
 ```
 
+## Visualizing simulations
+
+After you get the simulation result `.sim`, you can import it into Blender for visualization with
+```
+blender --python creature-visualizer.py
+```
+
+This will launch Blender with the creature visualizer plugin installed.
+Make sure you enable the AnimAll add-on.
+![](assets/animall.png)
+
+The plugin wraps the import functionality into one command, so you just need to navigate to the `.sim` simulation output file, and click `Import`.
+![](assets/tab.png)
+
+Playing around with the materials and lighting will get you something like this
 ![](assets/elizabeth-hickey.gif)
